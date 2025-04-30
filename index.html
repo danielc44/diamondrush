@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diamond Rush - Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login-container">
+    <h2>Inicia sesión en Diamond Rush</h2>
+    <input type="email" id="email" placeholder="Correo electrónico" required>
+    <input type="password" id="password" placeholder="Contraseña" required>
+    <button id="login-btn">Ingresar</button>
+    <p id="login-error"></p>
+  </div>
+
+  <div id="game-container" style="display:none;">
+    <h1>💎 Diamond Rush 💎</h1>
+
+    <div id="saldo-area">
+      <p>👤 Usuario: <span id="usuario"></span></p>
+      <p>💼 Saldo actual: <span id="saldo">0.00</span> monedas</p>
+      <label for="recargar">Recargar saldo:</label><br>
+      <input type="number" id="recargar" min="0.01" step="0.01" value="100.00" />
+      <button id="boton-recargar">➕ Añadir saldo</button>
+      <button id="boton-cerrar-sesion">🔒 Cerrar sesión</button>
+    </div>
+
+    <div id="apuesta-area">
+      <label for="apuesta">💸 Monto a apostar:</label><br>
+      <input type="number" id="apuesta" min="0.01" step="0.01" value="10.00" />
+      <button id="boton-apostar">🎲 Apostar</button>
+    </div>
+
+    <div id="game-info">
+      <p>Diamantes encontrados: <span id="diamantes">0</span></p>
+      <p>Multiplicador actual: <span id="multiplicador">1.00</span>x</p>
+      <p>Ganancia actual: <span id="ganancia">0.00</span> monedas</p>
+      <button id="retirarse">💰 Retirarse</button>
+    </div>
+
+    <div id="tablero" class="tablero-grid"></div>
+    <div id="resultado"></div>
+  </div>
+
+  <audio id="sonido-diamante" src="sounds/diamante.mp3" preload="auto"></audio>
+  <audio id="sonido-mina" src="sounds/mina.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
